@@ -5,11 +5,15 @@
 
 ### Committing changes to git:
 `git add .`
+
 `git commit -m "Changes you've made"`
+
 `git push https://github.com/kadams74/ITSC-3155-Blue-Team master`
 
 
-#### March 15
+#### March 17
+* Figured out git pull and push commands
+* Discussed plans going forward
 
 
 
