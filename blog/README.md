@@ -4,9 +4,9 @@
 `rails server -b $IP -p $PORT`
 
 ### Committing changes to git:
-`rm -rf .git
-git add .
-git commit -m "Changes you've made"`
+`git add .`
+`git commit -m "Changes you've made"`
+`git push https://github.com/kadams74/ITSC-3155-Blue-Team master`
 
 
 #### March 15
