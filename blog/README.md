@@ -1,9 +1,24 @@
-# README
+# New README
 
+### Running the server:
+`rails server -b $IP -p $PORT`
+
+### Committing changes to git:
+`rm -rf .git
+git add .
+git commit -m "Changes you've made"`
+
+
+#### March 15
+
+
+
+
+
+
+### Original README
 This README would normally document whatever steps are necessary to get the
 application up and running.
-
-This is a test to see if i can push the folder.
 
 Things you may want to cover:
 
