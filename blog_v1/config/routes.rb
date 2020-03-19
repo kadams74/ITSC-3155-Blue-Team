@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'coming_soon/index'
+  get 'movies/index'
   get 'welcome/index'
   
   resources :articles
