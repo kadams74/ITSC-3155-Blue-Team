@@ -10,6 +10,9 @@
 
 `git push https://github.com/kadams74/ITSC-3155-Blue-Team master`
 
+#### Migration pending error
+'rake db:migrate'
+
 
 #### March 17
 * Figured out git pull and push commands
