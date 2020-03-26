@@ -6,6 +6,8 @@
     <li><%= link_to 'Coming Soon', controller: 'coming_soon' %></li>
     <li style="float:right"><%= link_to 'Login', controller: 'login' %></li>
 </ul>
+</br>
+<%= link_to 'Back', articles_path %>
 <h1>New Article</h1>
 <%= form_for :article, url: articles_path do |f| %>
  
@@ -39,4 +41,3 @@
  
 <% end %>
  
-<%= link_to 'Back', articles_path %>
