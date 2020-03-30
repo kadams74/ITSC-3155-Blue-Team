@@ -1,11 +1,4 @@
-<h1>SuperBlue</h1>
-<ul>
-    <li><%= link_to 'Home', controller: 'welcome' %></li>
-    <li class='active'><%= link_to 'My Blog', controller: 'articles' %></li>
-    <li><%= link_to 'Movies', controller: 'movies' %></li>
-    <li><%= link_to 'Coming Soon', controller: 'coming_soon' %></li>
-    <li style="float:right"><%= link_to 'Login', controller: 'login' %></li>
-</ul>
+<%= render 'navigation' %>
 <p>
     <strong>Title:</strong>
     <%= @article.title %>
