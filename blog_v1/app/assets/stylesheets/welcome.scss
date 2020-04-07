@@ -1,36 +1,79 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 h1 {
     font-size: 32px;
     color: #1e90ff;
 }
 
+.title {
+    color: #1e90ff;
+    font-family: "Arial", Times, serif; /*backup fonts*/
+    /*center align text, font 32, bold*/
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: auto; /* center align the nav bar */
   padding: 0;
+  border-radius: 3px;
+  border: 1px solid #000000;
   overflow: hidden;
-  background-color: #333;
+  background-color: #333333;
+  width: 60%; /* nav bar is 60% width of the entire page - change as desired. */
 }
 
 li {
   float: left;
+  border-right: 1px solid #bbb;
+  font-size: 18px; /* font size of navbar */
+  width: 19.8%; /* 100% / 5 because we have 5 options in the menu bar. For example, if we get 6, this becomes 100/6 = 16.65% */
+  /* TODO fix this, it should be working at 20% */
+}
+
+li:last-child {
+  border-right: none; /* this is for the LAST element in the menu bar. We don't need a right border here, so this removes it */
 }
 
 li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px;
   text-decoration: none;
+}
+
+.active {
+  background-color: #1e90ff;
 }
 
 li a:hover:not(.active) {
   background-color: #006ad1;
 }
 
-.active {
-  background-color: #1e90ff;
+/* container for the full height of our page, this is used to force the footer to the bottom */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Block is the length of the nav bar to make content fit underneath the bar */
+.block {
+    width: 60vw; /* 60% of the view width */
+    text-align: left;
+    margin: auto;
+}
+
+.footer {
+    padding: 100px 0 0 0;
+    /*padding-bottom:75px;*/
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;             /* Footer height */
+    text-align:center;
+    opacity: 75%;
 }

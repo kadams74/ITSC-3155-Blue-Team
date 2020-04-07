@@ -1,8 +1,34 @@
-<h1>SuperBlue</h1>
-<ul>
-    <li class='active'><%= link_to 'Home', controller: 'welcome' %></li>
-    <li><%= link_to 'My Blog', controller: 'articles' %></li>
-    <li><%= link_to 'Movies', controller: 'movies' %></li>
-    <li><%= link_to 'Coming Soon', controller: 'coming_soon' %></li>
-    <li style="float:right"><%= link_to 'Login', controller: 'login' %></li>
-</ul>
+<div id="page-container"> <%# everything within the page will be put in a container with 60% width %>
+    <div class="title">SuperBlue</div><br> <%# change this to a company logo image %>
+    <ul>
+        <li class='active'><%= link_to 'Home', controller: 'welcome' %></li>
+        <li><%= link_to 'My Blog', controller: 'articles' %></li>
+        <li><%= link_to 'Movies', controller: 'movies' %></li>
+        <li><%= link_to 'Coming Soon', controller: 'coming_soon' %></li>
+        <li style="float:right"><%= link_to 'Login', controller: 'login' %></li>
+    </ul>
+    <div class="block">
+            <p>
+                This is some example content.<br>
+                Notice we are aligned underneath the nav bar. To do this, stay within the "block" div.
+            </p>
+    </div>
+    <p>
+        Now we are all the way to the left because we are outside of the "block" div.
+     </p>
+     <p align="right">Now we're all the way to the right because of the "< p align="right" >" tag
+    </p>
+         
+         
+            <p align="center">
+                Check out the footer.
+            </p>
+         
+    <footer>
+        <div class="footer">
+            <hr>
+            <p>Copyright &copy; 2020 Corey, Kyril, Kevin, and Hailey - Students at UNC Charlotte<br>ITSC 3155 - Software Engineering - Spring 2020 - Dr. Najjar</p>
+        </div>
+    </footer>
+    
+</div>
