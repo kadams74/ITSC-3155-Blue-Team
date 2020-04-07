@@ -1,24 +1,19 @@
-# README
+# New README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Running the server:
+`rails server -b $IP -p $PORT`
 
-Things you may want to cover:
+### Committing changes to git:
+`git add .`
 
-* Ruby version
+`git commit -m "Changes you've made"`
 
-* System dependencies
+`git push https://github.com/kadams74/ITSC-3155-Blue-Team master`
 
-* Configuration
 
-* Database creation
+#### Get the latest version of the project:
+`git clone https://github.com/kadams74/ITSC-3155-Blue-Team.git`
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Migration pending error
+`rake db:migrate`
