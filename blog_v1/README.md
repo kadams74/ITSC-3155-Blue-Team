@@ -21,5 +21,5 @@
 * Fix the nav bar not using the full 20% per link
 * When the window is resized, the nav bar messes up because of "Coming Soon"
 * Design a company logo
-* Put each page's "SuperBlue" text logo into a "title" div class. Check out `./app/views/welcome/_navigation.html.erb` to see how to incorporate this (along with other div stuff we need to use site-wide)
+* Add footers to each page
 * Maybe have a shared folder on Google docs for weekly zipped backups. Unless you're all comfortable with git and trust that our project will be safe

@@ -15,7 +15,7 @@ h1 {
     font-weight: bold;
 }
 
-ul {
+.navbar ul {
   list-style-type: none;
   margin: auto; /* center align the nav bar */
   padding: 0;
@@ -26,19 +26,19 @@ ul {
   width: 60%; /* nav bar is 60% width of the entire page - change as desired. */
 }
 
-li {
+.navbar li {
   float: left;
   border-right: 1px solid #bbb;
   font-size: 18px; /* font size of navbar */
-  width: 19.8%; /* 100% / 5 because we have 5 options in the menu bar. For example, if we get 6, this becomes 100/6 = 16.65% */
+  width: 20%; /* 100% / 5 because we have 5 options in the menu bar. For example, if we get 6, this becomes 100/6 = 16.65% */
   /* TODO fix this, it should be working at 20% */
 }
 
-li:last-child {
+.navbar li:last-child {
   border-right: none; /* this is for the LAST element in the menu bar. We don't need a right border here, so this removes it */
 }
 
-li a {
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
@@ -50,7 +50,7 @@ li a {
   background-color: #1e90ff;
 }
 
-li a:hover:not(.active) {
+.navbar li a:hover:not(.active) {
   background-color: #006ad1;
 }
 
@@ -76,4 +76,9 @@ li a:hover:not(.active) {
     height: 2.5rem;             /* Footer height */
     text-align:center;
     opacity: 75%;
+}
+
+/* This splits the page into 2 columns and also fixes the nav bar 20% issue */
+* {
+    box-sizing: border-box;
 }
