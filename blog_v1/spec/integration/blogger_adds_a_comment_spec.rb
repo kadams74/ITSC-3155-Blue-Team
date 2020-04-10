@@ -1,5 +1,7 @@
 require 'rails_helper.rb'
 
+# As a blogger I want to be able to create a comment under an article
+
 feature "Blogger adds an article, then adds a comment" do
     scenario "Blogger successfully navigates to the new articles page from the movie articles page" do
         visit articles_path
