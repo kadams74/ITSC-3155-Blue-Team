@@ -12,4 +12,12 @@ feature "Moviegoer visits Movies page, and then visits Coming Soon page" do
        expect(page).to have_content("Netflix")
    end
    
+   scenario "Moviegoer succesfully navigates to the coming soon page from the mavies page via the navigation bar." do
+      visit movies_index_path
+      expect(page).to have_content("Movies")
+      expect(page).to have_content("In Theaters")
+      expect(page).to have_content("Netflix")
+      click_link "Coming Soon"
+      expect(page).to have_content("Coming Soon")
+   end
 end
