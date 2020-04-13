@@ -4,7 +4,7 @@
 `rails server -b $IP -p $PORT`
 
 #### Get the latest version of the project:
-`git clone https://github.com/kadams74/ITSC-3155-Blue-Team.git`
+`git pull https://github.com/kadams74/ITSC-3155-Blue-Team master`
 
 ### Committing changes to git:
 `git add .`
