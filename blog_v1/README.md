@@ -18,8 +18,4 @@
 
 
 #### TODO:
-* Fix the nav bar not using the full 20% per link
-* When the window is resized, the nav bar messes up because of "Coming Soon"
-* Design a company logo
-* Add footers to each page
-* Maybe have a shared folder on Google docs for weekly zipped backups. Unless you're all comfortable with git and trust that our project will be safe
+* "Login" changes to "Logged in as ..." when logged in
