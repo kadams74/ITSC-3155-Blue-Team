@@ -18,4 +18,7 @@
 
 
 #### TODO:
-* "Login" changes to "Logged in as ..." when logged in
+* add content
+
+#### Note:
+* `logout_path`, (soon to be; not yet implemented) `signup_path` and `login_path` are NOT being called in the navigation bar -- or anywhere for that matter. Everything is being directed using `controller: 'login'` or `logout` etc

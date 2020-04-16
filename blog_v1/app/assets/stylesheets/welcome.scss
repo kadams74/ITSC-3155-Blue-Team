@@ -67,6 +67,30 @@ h1 {
     margin: auto;
 }
 
+/* For the log in section */
+.login-block {
+  width: 385px;
+  text-align: center;
+  margin: auto;
+  /* padding: top, right, bottom, left */
+  padding: 30px 50px 30px 50px;
+  border: 1px solid #000000;
+  /*border-style: solid none;*/
+  border-radius: 25px;
+  box-shadow: 0px 0px 15px #080808; /*006ad1*/
+}
+
+
+/* TODO fix this to only be for the 'login' page */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
 .footer {
     padding: 100px 0 0 0;
     /*padding-bottom:75px;*/

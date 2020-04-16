@@ -1,12 +1,29 @@
 <div id="page-container"> <%# everything within the page will be put in a container for the footer%>
     <%= render 'navigation' %>
-    <h1>Log in</h1>
-    
+    <br><br><br><br><br>
     <% if current_user %>
         Logged in as <%= current_user.name %>.
         <%= link_to "Log Out", logout_path %>
     <% else %>
-        <%= link_to "Sign Up", signup_path %> or
-        <%= link_to "Log In", login_path %>
+    
+    <div class="login-block">
+        <h1>Welcome!</h1><br><br>
+        <%= form_tag sessions_path do |form| %>
+        <div class="field">
+            <%= label_tag :email %>
+            <%= text_field_tag :email %>
+        </div>
+        <div class="field">
+            <%= label_tag :password %>
+            <%= password_field_tag :password %>
+        </div>
+        <div class="actions">
+            <%= submit_tag "Login" %>
+        </div>
+        <% end %>
+        <br><br><br><br><br><br><br>
+            <%= link_to "Don't have an account? Sign Up", signup_path %>
+    </div>
+
     <% end %>
 </div>

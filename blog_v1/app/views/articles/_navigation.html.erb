@@ -7,6 +7,17 @@
         <li class='active'><%= link_to 'Articles', controller: 'articles' %></li>
         <li><%= link_to 'Movies', controller: 'movies' %></li>
         <li><%= link_to 'Coming Soon', controller: 'coming_soon' %></li>
-        <li style="float:right"><%= link_to 'Login', controller: 'login' %></li>
+        <% if current_user %>
+            <li style="float:right"><%= link_to "Log Out", logout_path %></li>
+        <% else %>
+            <li class="dropdown">
+                <%= link_to 'Login', controller: 'login' %>
+                
+                <div class="dropdown-content">
+                    <ddli><%= link_to 'Sign Up', signup_path %></ddli>
+                </div>
+                
+            </li>
+        <% end %>
     </ul>
 </div>
