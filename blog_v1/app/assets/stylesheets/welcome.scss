@@ -82,3 +82,35 @@ h1 {
 * {
     box-sizing: border-box;
 }
+
+/* for the dropdown menu:*/
+
+/* When we hover over the nav bar: */
+
+
+/* For drop-down sub menus */
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 12%;
+}
+
+/* ddli stands for "drop down list" */
+.dropdown-content ddli {
+    display: block;
+    text-align: left;
+}
+
+/* Dropdown style for menu bar */
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Maybe overkill, but a standard "border" tag would include the top, which we don't want.
+     This would make a black line appear between elements */
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
