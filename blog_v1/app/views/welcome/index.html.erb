@@ -2,6 +2,15 @@
 <%= render 'navigation' %>
     
     <div class="block">
+        
+    <p>
+        <% if current_user %>
+            Welcome, <%= current_user.name %>!
+        <% else %>
+            Welcome!
+        <% end %>
+    </p>
+    
             <p>
                 This is some example content.<br>
                 Notice we are aligned underneath the nav bar. To do this, stay within the "block" div.
@@ -17,6 +26,5 @@
     <p align="center">
         Check out the footer.
     </p>
-    
     
 </div>
