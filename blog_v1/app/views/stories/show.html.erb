@@ -1,0 +1,19 @@
+<%= render 'navigation' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @story.title %>
+</p>
+
+<p>
+  <%= image_tag(@story.image, style:'width:400px') %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @story.caption %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>
