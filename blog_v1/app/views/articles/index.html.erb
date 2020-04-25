@@ -2,6 +2,27 @@
 <%= render 'navigation' %>
 
 <h1>Movie Articles</h1>
+
+<%# ------------- START OF SEARCH -------------- %>
+<%= form_tag(search_page_path, :method => "get",   
+    class: 'navbar-form navbar-left') do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search for ...", class: "form-control" %>  
+    <div class="input-group-btn">
+      <%= button_tag "Search" %>  
+    </div>  
+  </div>
+<% end %>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
+
+<br><br><br>
+<%# ------------- END OF SEARCH -------------- %>
+
+
 <%= link_to 'New article', new_article_path %>
 <table>
   <tr>

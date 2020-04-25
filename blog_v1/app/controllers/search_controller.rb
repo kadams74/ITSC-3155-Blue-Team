@@ -1,11 +1,14 @@
 class SearchController < ApplicationController
     def search
-        if params[:search].blank?  
-            #redirect_to(root_path, alert: "Empty field!") and return  
-            
-        else  
+        if params[:search].blank? #If the user enters no data in the field:
+            redirect_to(articles_path, notice: "Please enter a value.") and return
+        else # user entered data:
             @parameter = params[:search].downcase  
             @results = Article.all.where("lower(title) LIKE :search", search: "%#{@parameter}%")
         end  
+    end
+    
+    def alert=(message)
+        self[:alert] = message
     end
 end
