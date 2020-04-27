@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   
   resources :movies do
     resources :reviews
-    resources :ratings
   end
   
   resources :sessions, only: [:new, :create, :destroy]
