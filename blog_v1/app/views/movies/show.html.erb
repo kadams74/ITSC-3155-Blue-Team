@@ -10,6 +10,37 @@
     <%= @movie.synopsis %>
 </p>
 
+<h2>Ratings</h2>
+<% if @movie.ratings.empty? %>
+    <p>
+        There are currently no ratings for this movie, would you like to rate this movie?
+    </p>
+<% else %>
+    <% total = 0.00 %>
+    <% counter = 0 %>
+    <% @movie.ratings.each do |ratings| %>
+        <% total += ratings.value %>
+        <% counter += 1 %>
+    <% end %>
+    <% average = total / counter %>
+    <p>
+        <strong>Average Rating:</strong>
+        <%= average %>
+    </p>
+<% end %>
+
+<h2>Rate This Movie:</h2>
+
+<%= form_for([@movie, @movie.ratings.build]) do |f| %>
+    <p>
+        <%= f.label :value %><br>
+        <%= f.select(:value, (1..5)) %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+
 <h2>Reviews</h2>
 <%= render @movie.reviews %>
 
