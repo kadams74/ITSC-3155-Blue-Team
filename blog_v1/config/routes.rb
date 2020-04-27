@@ -13,7 +13,9 @@ Rails.application.routes.draw do
     resources :comments
   end
   
-  resources :movies
+  resources :movies do
+    resources :reviews
+  end
   
   resources :sessions, only: [:new, :create, :destroy]
   get 'signup', to: 'users#new', as: 'signup'
