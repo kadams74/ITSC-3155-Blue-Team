@@ -10,6 +10,12 @@
     <%= @movie.synopsis %>
 </p>
 
+<h2>Reviews</h2>
+<%= render @movie.reviews %>
+
+<h2>Add a review:</h2>
+<%= render 'reviews/form' %>
+
 <p>
     <%= link_to 'Back to Movies', movies_path %>
 </p>

@@ -1,0 +1,15 @@
+<p>
+    <strong>Reviewer:</strong>
+    <%= review.reviewer %>
+</p>
+
+<p>
+    <strong>Review:</strong>
+    <%= review.body %>
+</p>
+
+<p>
+    <%= link_to 'Destroy Review', [review.movie, review],
+                method: :delete,
+                data: {confirm: 'Are you sure?' } %>
+</p>
