@@ -45,24 +45,9 @@ class ArticlesController < ApplicationController
         redirect_to articles_path
     end 
     
-    def sort_title
-        @article = Article.all.sort_by article_params(:title)
-    end
-    
-    def sort_movie
-        @article = Article.all.sort_by article_params(:title)
-    end
-    
-    def sort_date
-        @article = Article.all.sort_by article_params(:date)
-    end
-    
-    def sort_user
-        @article = Article.all.sort_by article_params(:user)
-    end
 end
 
 private
     def article_params
-        params.require(:article).permit(:title, :text)
+        params.require(:article).permit(:title, :text, :date, :user)
     end

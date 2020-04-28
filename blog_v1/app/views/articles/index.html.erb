@@ -24,15 +24,16 @@
 
 
 <%= link_to 'New article', new_article_path %>
-<table>
+<table class= "sortable">
+  <thead>
   <tr>
     <div class="dropdown">
   <button class="dropbtn">Sort By</button>
   <div class="dropdown-content">
-    <a href=sort_user>UserName</a>
-    <a href=sort_movie>Movie</a>
-    <a href=sort_user>User</a>
-    <a href=sort_date>Date</a>
+    <th> Title</th>
+    <th> User</th>
+    <th> Date </th>
+    </thead>
   </div>
 </div>
 
@@ -40,6 +41,7 @@
     <th>Text</th>
   </tr>
  
+
   <% @articles.each do |article| %>
     <tr>
       <td><%= article.title %></td>
