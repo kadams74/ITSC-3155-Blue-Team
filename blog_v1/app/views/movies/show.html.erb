@@ -1,4 +1,56 @@
 <div id="page-container"> 
     <%= render 'navigation' %>
+    <p>
+    <strong>Movie Title:</strong>
+    <%= @movie.title %>
+</p>
 
+<p>
+    <strong>Movie Synopsis:</strong>
+    <%= @movie.synopsis %>
+</p>
+
+<h2>Ratings</h2>
+<% if @movie.ratings.empty? %>
+    <p>
+        There are currently no ratings for this movie, would you like to rate this movie?
+    </p>
+<% else %>
+    <% total = 0.00 %>
+    <% counter = 0 %>
+    <% @movie.ratings.each do |ratings| %>
+        <% total += ratings.value %>
+        <% counter += 1 %>
+    <% end %>
+    <% average = total / counter %>
+    <p>
+        <strong>Average Rating:</strong>
+        <%= average %>
+    </p>
+<% end %>
+
+<h2>Rate This Movie:</h2>
+
+<%= form_for([@movie, @movie.ratings.build]) do |f| %>
+    <p>
+        <%= f.label :value %><br>
+        <%= f.select(:value, (1..5)) %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
+
+<h2>Reviews</h2>
+<%= render @movie.reviews %>
+
+<h2>Add a review:</h2>
+<%= render 'reviews/form' %>
+
+<p>
+    <%= link_to 'Back to Movies', movies_path %>
+</p>
+
+<br><br><br><br><br><br><br>
+<%= render 'footer' %>
 </div>

@@ -1,0 +1,25 @@
+<div id="page-container"> <%# everything within the page will be put in a container for the footer%>
+
+<%= render 'navigation' %>
+<div class="block">
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @story.title %>
+</p>
+
+<p>
+  <%= image_tag(@story.image, style:'width:400px') %>
+</p>
+
+<p>
+  <strong>Caption:</strong>
+  <%= @story.caption %>
+</p>
+
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>
+</div>
+<br><br><br><br><br><br>
+</div>
