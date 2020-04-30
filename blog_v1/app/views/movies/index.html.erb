@@ -1,20 +1,23 @@
-
-    <h1>Movies</h1>
-    <h2>In Theaters</h2>
-    <p>Nothing due to COVID-19. RIP</p>
-    <h2>OnDemand</h2>
+<h1>Movies</h1>
+<h2>In Theaters</h2>
+<p>Nothing due to COVID-19. RIP</p>
+<h2>OnDemand</h2>
 <table>
-  <tr>
-    <th>Title</th>
-  </tr>
- 
-  <% @movies.each do |movie| %>
-    <tr>
-      <td><%= movie.title %></td>
-      <td><%= link_to 'Show', movie_path(movie) %></td>
-    </tr>
-  <% end %>
+	<tr>
+		<th>Title</th>
+	</tr>
+	
+	<% if !@movies %>
+		<% @movies.each do |movie| %>
+			<tr>
+				<td><%= movie.title %></td>
+				<td><%= link_to 'Show', movie_path(movie) %></td>
+			</tr>
+		<% end %>
+	<% else %>
+		<p>Error loading movies! Does it exist in the database?</p>
+	<% end %>
 </table>
 
-    
+		
 <br><br><br><br><br><br><br>
