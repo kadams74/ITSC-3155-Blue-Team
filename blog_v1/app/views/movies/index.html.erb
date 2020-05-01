@@ -7,7 +7,7 @@
 		<th>Title</th>
 	</tr>
 	
-	<% if !@movies %>
+	<% if @movies %>
 		<% @movies.each do |movie| %>
 			<tr>
 				<td><%= movie.title %></td>
