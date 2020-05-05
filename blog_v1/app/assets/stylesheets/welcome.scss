@@ -216,3 +216,9 @@ li.dropdown {
 	font-family: "BebasNeue-Regular";
 	src: url("../fonts/BebasNeue-Regular") format("opentype");
 }
+
+th, td {
+	padding: 10px;
+	border: 1px solid #b3b3ae;
+	border-collapse: collapse;
+}

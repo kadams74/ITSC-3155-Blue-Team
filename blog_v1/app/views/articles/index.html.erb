@@ -25,19 +25,29 @@
 <%= link_to 'New article', new_article_path %>
 <table class= "sortable">
   <thead>
-  <tr>
-    <div class="dropdown">
-  <button class="dropbtn">Sort By</button>
-  <div class="dropdown-content">
-    <th> Title</th>
-    <th> User</th>
-    <th> Date </th>
-    </thead>
-  </div>
-</div>
+    <tr>
+      <div class="dropdown">
+        <button class="dropbtn">Sort By</button>
+        <div class="dropdown-content">
+          <th> Title</th>
+          <th> User</th>
+          <th> Date </th>
+        </thead>
+      </div>
+    </div>
 
     <th>Title</th>
     <th>Text</th>
+  </tr>
+  </table>
+  
+  <br><br><br><br>
+  
+  <table>
+  <tr>
+    <th style="padding: 15px 20px">Title</th>
+    <th style="padding: 0px 50px">Text</th>
+    <th style="padding: 0px 50px">Author</th>
   </tr>
  
 
@@ -45,6 +55,9 @@
     <tr>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
+      <td><% if article.user %>
+          <%= article.user.name %>
+          <% end %></td>
       <td><%= link_to 'Show', article_path(article) %></td>
       <td><%= link_to 'Edit', edit_article_path(article) %></td>
       <td><%= link_to 'Destroy',

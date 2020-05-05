@@ -8,7 +8,7 @@
 </p>
 
 <p>
-  <%= image_tag(@story.image, style:'width:400px') %>
+  <%= image_tag(@story.image, style:'width:30vw') if @story.image.attached? %>
 </p>
 
 <p>
