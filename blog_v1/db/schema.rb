@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2020_04_27_015513) do
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.text "synopsis"
+    t.float "ratings"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

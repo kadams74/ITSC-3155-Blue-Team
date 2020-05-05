@@ -1,0 +1,44 @@
+<div class="block">
+    
+</br>
+<%= link_to '< Back', movies_path %>
+<h1>New Movie</h1>
+
+<%= form_for @movie do |f| %>
+ 
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@movie.errors.count, "error") %> prohibited
+        this movie from being saved:
+      </h2>
+      <ul>
+        <% @movie.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  
+  
+  <p>
+    <%= f.label :synopsis %><br>
+    <%= f.text_field :synopsis %>
+  </p>
+  
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+
+
+<br><br><br><br><br><br><br>
+</div>
