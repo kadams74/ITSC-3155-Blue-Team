@@ -1,27 +1,29 @@
 
     <div class="block">
         
-    <p>
+    
+    <h3>
         <% if current_user %>
             Welcome, <%= current_user.name %>!
         <% else %>
             Welcome!
         <% end %>
-    </p>
-   
-            <p>
-                This is some example content.<br>
-                Notice we are aligned underneath the nav bar. To do this, stay within the "block" div.
-            </p>
+    </h3>
+    
+    <h2 style="text-align:center"><u>Movies currently streaming:</u></h2>
+    <div id="slideshow">
+      <!-- Thank you to https://code-boxx.com/simple-pure-css-slideshow/ -->
+      <div id="slides">
+        <%= image_tag("slideshow/chernobyl.jpg", alt: "Chernobyl", 'data-caption': "Chernobyl (2019)" ) %>
+        <%= image_tag("slideshow/endgame.jpg", alt: "Avengers: Endgame", 'data-caption': "Avengers: Endgame (2019)" ) %>
+        <%= image_tag("slideshow/joker.jpg", alt: "Joker", 'data-caption': "Joker (2019)" ) %>
+      </div>
+ 
+      <!-- [CONTROLS + CAPTION] -->
+      <div id="slide-left">&lt;</div>
+      <div id="slide-right">&gt;</div>
+      <div id="slide-caption"></div>
     </div>
     
-    
-    <p>Now we are all the way to the left because we are outside of the "block" div.</p>
-    
-    <p align="right">Now we're all the way to the right because of the "< p align="right" >" tag</p>
-         
-         
-    <p align="center">
-        Check out the footer.
-    </p>
+    </div>
     
