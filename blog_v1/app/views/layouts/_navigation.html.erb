@@ -8,7 +8,9 @@
         <li class="<%= 'active' if current_page?(controller: 'movies') %>"><%= link_to 'Movies', controller: 'movies' %></li>
         <li class="<%= 'active' if current_page?(controller: 'stories') %>"><%= link_to 'Stories', controller: 'stories' %></li>
                 <% if current_user %>
-            <li style="float:right" class="<%= 'active' if current_page?(controller: 'login') %>"><%= link_to "Log Out", logout_path %></li>
+            <!--<li style="float:right" class="<%= 'active' if current_page?(controller: 'login') %>"><%= link_to "Log Out", logout_path %></li>-->
+            <!--<li style="float:right" class="<%= 'active' if current_page?(controller: 'login') %>"><%= link_to "Log Out", logout_path %></li>-->
+            <li style="float:right" class="<%= 'active' if current_page?(controller: 'login') %>"><a href="<%= logout_path %>">Log out <%= current_user.name %></a></li>
         <% else %>
             <li class="dropdown">
                 <div class="<%= 'active' if current_page?(controller: 'login') %>"><%= link_to 'Login', controller: 'login' %></div>
