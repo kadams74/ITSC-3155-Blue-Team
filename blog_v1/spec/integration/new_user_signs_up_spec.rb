@@ -23,4 +23,5 @@ feature "New user creates an account" do
         fill_in "Password", with: "password"
         click_button "Login"
     end
+    
 end
